@@ -39,6 +39,12 @@ app.use(morgan('dev'));  // For development logs
 app.use(helmet()); // Adds security-related HTTP headers
 
 
+app.get('/',(req,res)=>{
+    res.send("API Working")
+})
+
+
+
 app.listen(PORT, () => {
     connectDB();
     console.log("Server is running on port:", PORT);
